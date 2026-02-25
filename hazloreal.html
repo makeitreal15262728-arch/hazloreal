@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hazlo Real | Agencia Digital Premium</title>
+
+<!-- Fuente moderna -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* Reset y scroll suave */
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background:#000; color:#fff; }
+
+/* Navbar */
+nav {
+display:flex; justify-content:space-between; align-items:center;
+padding:20px 60px; position:fixed; top:0; width:100%; z-index:1000;
+background: rgba(0,0,0,0.85); border-bottom:1px solid #111;
+}
+nav h2 { font-weight:700; font-size:24px; }
+nav a { color:#fff; text-decoration:none; margin-left:25px; font-weight:500; transition:0.3s; }
+nav a:hover { opacity:1; color:#22c55e; }
+
+/* Hero */
+header {
+text-align:center; padding:200px 20px 140px 20px;
+background: linear-gradient(135deg,#000,#111);
+}
+header h1 { font-size:56px; font-weight:700; animation:fadeIn 1.5s ease; }
+header p { max-width:650px; margin:auto; font-size:20px; opacity:0.8; animation:fadeIn 2s ease; line-height:1.5; }
+.btn {
+display:inline-block; margin-top:30px; padding:18px 45px; background:#22c55e;
+color:#000; font-weight:600; border-radius:30px; transition:0.3s; text-decoration:none;
+}
+.btn:hover { background:#16a34a; transform:scale(1.05); }
+
+/* Sections */
+section { padding:120px 20px; text-align:center; border-top:1px solid #111; }
+.container { max-width:1200px; margin:auto; }
+
+/* Cards servicios */
+.cards {
+display:flex; flex-wrap:wrap; justify-content:center; gap:35px; margin-top:50px;
+}
+.card {
+background:#111; padding:40px; border-radius:20px; width:300px;
+border:1px solid #222; transition:0.5s; opacity:0; transform:translateY(50px);
+}
+.card:hover { transform:translateY(-15px); border:1px solid #333; }
+.card.show { opacity:1; transform:translateY(0); }
+.card h3 { margin-bottom:15px; font-size:22px; }
+
+/* Proceso */
+.process { display:flex; flex-wrap:wrap; justify-content:center; gap:50px; margin-top:50px; }
+.step { width:220px; opacity:0; transform:translateY(50px); transition:0.5s; }
+.step.show { opacity:1; transform:translateY(0); }
+.step h3 { font-size:28px; color:#22c55e; margin-bottom:10px; }
+
+/* Formulario */
+form { max-width:550px; margin:50px auto 0 auto; display:flex; flex-direction:column; gap:20px; }
+input, textarea {
+padding:15px; background:#111; border:1px solid #222; border-radius:12px; color:white; font-size:15px;
+}
+textarea { resize:none; height:130px; }
+form button { padding:18px 45px; background:#22c55e; color:#000; font-weight:600; border:none; border-radius:30px; cursor:pointer; transition:0.3s; }
+form button:hover { background:#16a34a; transform:scale(1.05); }
+
+/* Footer */
+footer { background:#0a0a0a; text-align:center; padding:50px; font-size:14px; opacity:0.5; border-top:1px solid #111; }
+
+/* Animaciones */
+@keyframes fadeIn { from{opacity:0;} to{opacity:1;} }
+
+/* Scroll reveal */
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>Hazlo Real</h2>
+<div>
+<a href="#inicio">Inicio</a>
+<a href="#servicios">Servicios</a>
+<a href="#proceso">Proceso</a>
+<a href="#contacto">Contacto</a>
+</div>
+</nav>
+
+<header id="inicio">
+<h1>Transformamos ideas en negocios reales</h1>
+<p>Hazlo Real es tu agencia digital premium. Creamos páginas web modernas, rápidas y con diseño profesional para emprendedores que quieren destacar.</p>
+<a href="#contacto" class="btn">Comienza tu proyecto</a>
+</header>
+
+<section id="servicios">
+<div class="container">
+<h2>Servicios Premium</h2>
+<div class="cards">
+<div class="card">
+<h3>Landing Pages</h3>
+<p>Optimización para convertir visitantes en clientes de manera efectiva.</p>
+</div>
+<div class="card">
+<h3>Web Corporativa</h3>
+<p>Presencia digital profesional, elegante y adaptada a todos los dispositivos.</p>
+</div>
+<div class="card">
+<h3>Marca Personal</h3>
+<p>Diseñamos tu identidad digital para que tu marca destaque y genere confianza.</p>
+</div>
+<div class="card">
+<h3>E-commerce</h3>
+<p>Tiendas online rápidas, seguras y listas para vender desde el primer día.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="proceso">
+<div class="container">
+<h2>Proceso de Trabajo</h2>
+<div class="process">
+<div class="step">
+<h3>01</h3>
+<p>Estrategia</p>
+</div>
+<div class="step">
+<h3>02</h3>
+<p>Diseño</p>
+</div>
+<div class="step">
+<h3>03</h3>
+<p>Desarrollo</p>
+</div>
+<div class="step">
+<h3>04</h3>
+<p>Lanzamiento</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="contacto">
+<div class="container">
+<h2>Contacto</h2>
+<p>¿Listo para hacer tu idea realidad? Envíanos tu mensaje y comenzamos.</p>
+
+<form>
+<input type="text" placeholder="Tu nombre">
+<input type="email" placeholder="Tu email">
+<textarea placeholder="Describe tu proyecto"></textarea>
+<button type="submit">Enviar</button>
+</form>
+</div>
+</section>
+
+<footer>
+© 2026 Hazlo Real - Todos los derechos reservados
+</footer>
+
+<script>
+// Animación scroll reveal
+const cards = document.querySelectorAll('.card');
+const steps = document.querySelectorAll('.step');
+
+function reveal(elements){
+elements.forEach(el=>{
+const pos = el.getBoundingClientRect().top;
+if(pos < window.innerHeight - 100){ el.classList.add('show'); }
+});
+}
+
+window.addEventListener('scroll', ()=>{ reveal(cards); reveal(steps); });
+window.addEventListener('load', ()=>{ reveal(cards); reveal(steps); });
+</script>
+
+</body>
+</html>
